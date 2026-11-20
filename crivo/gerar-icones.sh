@@ -6,7 +6,8 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 SVG=crivo/icone.svg
 for f in public/*.png; do
-  tam=$(identify -format '%w' "$f")
+  # Alguns vêm vazios no Chatwoot (apple-touch-icon*): esses saem em 180px, o tamanho do iPhone.
+  if [ -s "$f" ]; then tam=$(identify -format '%w' "$f"); else tam=180; fi
   rsvg-convert -w "$tam" -h "$tam" "$SVG" -o "$f"
   case "$f" in
     *favicon-badge-*)
