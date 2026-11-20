@@ -14,4 +14,5 @@ Fork do Chatwoot v4.18.0 (a mesma versão da Conceito), branch `crivo`, reposit�
 ## O que já mudou
 - Logo: `public/brand-assets/` com a bolinha da Crivo (`crivo/icone.svg`); no modo escuro, só o "C" (`crivo/icone-c.svg`).
 - Favicons e ícones PNG: refeitos no build por `crivo/gerar-icones.sh`.
-- Nome padrão `Crivo` em `config/installation_config.yml` (vale pra instalação nova; numa que já existe, trocar no Super Admin › Settings).
+- Nome `Crivo`: padrão em `config/installation_config.yml` (instalação nova) e `config/initializers/zz_crivo_marca.rb` (corrige a que já existe ao subir). A tela de marca do Super Admin é recurso pago (pasta `enterprise/`) e não é destravada.
+- A imagem é só Community (MIT): o build tira a pasta `enterprise/`, que tem licença paga.
